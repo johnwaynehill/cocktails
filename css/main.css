@@ -7,6 +7,17 @@
  */
 
 /* ==========================================================================
+   Colors
+   ========================================================================== 
+
+    Stimulant Green:    #D3F000;
+    Light Grey:         #DEDEDE;
+    Medium Grey:        #717171;
+    Dark Grey:          #222222;
+
+*/
+
+/* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
 
@@ -24,15 +35,15 @@ body {
 }
 
 a {
-    color: #00e;
+    color: #D3F000;
 }
 
 a:visited {
-    color: #551a8b;
+    color: #222;
 }
 
 a:hover {
-    color: #06e;
+    color: #D3F000;
 }
 
 /*
@@ -81,7 +92,7 @@ header h1 a,
 header h1 a:visited {
     font-weight: 500;
     font-size: 1.3em;
-    color: #666;
+    color: #474747;
     text-decoration: none;
     margin-top: -5px;
     margin-bottom: 0px;
@@ -103,20 +114,24 @@ nav li {
 
 nav li a {
     padding: 5px 10px;
-    color: #336699;
+    color: #222;
     text-decoration: none;
 }
 
-nav li a:hover, header li a:visited {
-    color: #336699;
+nav li a:hover {
+    color: #D3F000;
+}
+
+header li a:visited {
+    color: #222;
 }
 
 nav li a.disabled {
-    color: #efefef;
+    color: #dedede;
 }
 
 nav li a.active {
-    color: #333;
+    color: #D3F000;
 }
 
 section {
@@ -186,7 +201,7 @@ section.title {
 }
     
 .cocktail_lists li a {
-    color: #333;
+    color: #222;
     text-decoration: none;
     display: block;
     float: left;
@@ -335,12 +350,16 @@ textarea[contenteditable] {
     header h1 a:visited {
         font-weight: 500;
         font-size: 1.3em;
-        color: #666;
+        color: #474747;
         text-decoration: none;
         margin-top: 5px;
         margin-bottom: 5px;
         padding: 0;
         display: block;
+    }
+    
+    header h1 a:hover {
+        color: #D3F000;
     }
     
     header h1 {
@@ -364,14 +383,17 @@ textarea[contenteditable] {
     nav li a {
         padding: 5px 10px;
         display: block;
-        color: #336699;
-        text-decoration: none;
+    }
+    
+    nav li a:hover {
+        background-color: #D3F000;
+        color: #fff;
     }
     
     section {
         clear: none;
         float: left;
-        width: 42%;
+        width: 45%;
     }
 }
 
