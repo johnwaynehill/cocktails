@@ -152,6 +152,7 @@ section.title {
 
 .cocktail {
     margin-bottom: 30px;
+    overflow: hidden;
 }
 
 .cocktail img {
@@ -165,6 +166,10 @@ section.title {
 
 .cocktail ul {
     margin: 0;
+}
+
+.cocktail_lists { 
+    overflow: hidden;
 }
 
 .cocktail_lists ul {
@@ -193,16 +198,6 @@ section.title {
 .cocktail_lists li a img {
     width: 160px;
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -323,6 +318,61 @@ textarea[contenteditable] {
 
 @media only screen and (min-width: 800px) {
     /* Style adjustments for viewports that meet the condition */
+    
+    header {
+        clear: both;
+        padding: 0px;
+        margin: 10px 10px;
+        width: 280px;
+        float: left;
+        margin-right: 30px;
+        border-right: 1px solid #dedede;
+        overflow: hidden;
+    }
+    
+    header h1,
+    header h1 a,
+    header h1 a:visited {
+        font-weight: 500;
+        font-size: 1.3em;
+        color: #666;
+        text-decoration: none;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        padding: 0;
+        display: block;
+    }
+    
+    header h1 {
+        border-bottom: 1px solid #dedede;
+    }
+    
+    nav {
+        clear: none;
+        overflow: hidden;
+        border-top: none;
+        border-bottom: none;
+        padding: 10px 0px;
+    }
+        
+    nav li {
+        list-style-type: none;
+        float: none;
+        display: block;
+    }
+        
+    nav li a {
+        padding: 5px 10px;
+        display: block;
+        color: #336699;
+        text-decoration: none;
+    }
+    
+    section {
+        clear: none;
+        float: left;
+        width: 42%;
+    }
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
