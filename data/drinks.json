@@ -1,6 +1,5 @@
-<script>
-    
-var gin = {"drinks" : [
+{
+    "gin" : [
         {
             "name" : "Negroni",
             "photo" : "negroni.jpg",
@@ -8,12 +7,8 @@ var gin = {"drinks" : [
             "directions" : "Add all ingredients to shaker. Add ice. Shake for 10-20 seconds until very cold. Double strain into chilled rocks glass over ice.",
             "description" : " "
         }
-]};
-    
-var tequila = {};
-var vodka = {};
-    
-var whiskey = {"drinks" : [
+    ],
+    "whiskey" : [
         {
             "name" : "Mint Julep",
             "photo" : "mintjulep.jpg",
@@ -56,6 +51,5 @@ var whiskey = {"drinks" : [
             "directions" : "Add simple syrup to glass. Squeeze lemon juice into glass, no more than 1oz. Add whiskey. Add ice cubes and stir for 2 minutes.",
             "description" : " "
         }
-]};
-
-</script>
+    ]
+}

@@ -54,7 +54,7 @@
         </section>
         
         <section class="cocktail">            
-            <h2>Mint Julep</h2>
+            <h2 id="cocktail_name"></h2>
             <img src="img/mintjulep.jpg" />
             <h4>Ingredients</h4>
             <ul class="ingredients">
@@ -72,5 +72,20 @@
         <script src="js/vendor/zepto.min.js"></script>
         <script src="js/helper.js"></script>
         <script src="js/main.js"></script>
+        <script>
+            $.getJSON('data/drinks.min.json', function(data) 
+            {
+                var all_drinks = [];
+                $.each( data, function(key, drinks) 
+                {
+                    //console.log( drinks );
+                    for( var i = 0; i < drinks.length; i++ )
+                    {
+                        all_drinks.push( "<li>" + drinks[i].name + "</li>" ); 
+                    }
+                });
+                console.log(all_drinks);
+            });
+        </script>
     </body>
 </html>
