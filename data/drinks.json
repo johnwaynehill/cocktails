@@ -79,8 +79,8 @@
         {
             "name" : "Tishman",
             "photo" : "tishman.jpg",
-            "ingredients" : ["2 oz Bourbon", "1/2 oz Fresh Lemon Juice", "1/2 oz Rosemary-Lemon Simple Sryup"],
-            "directions" : "Add all ingredients to shaker. Add ice. Shake for 10-20 seconds until very cold. Double strain into chilled rocks glass over ice.",
+            "ingredients" : ["2 oz Bourbon", "1/2 oz Fresh Lemon Juice", "1/2 oz Rosemary-Lemon Simple Sryup", "Splash of Club Soda],
+            "directions" : "Add all ingredients to shaker, except club soda. Add ice. Shake for 10-20 seconds until very cold. Double strain into chilled rocks glass over ice. Top with club soda",
             "description" : " ",
             "origin" : " "
         }
