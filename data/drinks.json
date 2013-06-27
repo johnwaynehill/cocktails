@@ -63,8 +63,24 @@
         {
             "name" : "Whiskey Sour Alt",
             "photo" : "whiskeysour_alt.jpg",
-            "ingredients" : ["<li>2 oz Whiskey", "1 oz Fresh Lemon Juice", "3/4 oz Simple Sryup"],
-            "directions" : "Add simple syrup to glass. Squeeze lemon juice into glass, no more than 1oz. Add whiskey. Add ice cubes and stir for 2 minutes.",
+            "ingredients" : ["2 oz Whiskey", "1 oz Fresh Lemon Juice", "3/4 oz Simple Sryup"],
+            "directions" : "Add all ingredients to shaker. Add ice. Shake for 10-20 seconds until very cold. Double strain into chilled rocks glass over ice.",
+            "description" : " ",
+            "origin" : " "
+        },
+        {
+            "name" : "Whiskey Stone Sour",
+            "photo" : "whiskeysour_stone_sour.jpg",
+            "ingredients" : ["2 oz Bourbon", "1 oz Orange Juice", "1/2 oz Fresh Lemon Juice", "1/4 oz Simple Sryup"],
+            "directions" : "Add all ingredients to shaker. Add ice. Shake for 10-20 seconds until very cold. Double strain into chilled rocks glass over ice.",
+            "description" : " ",
+            "origin" : " "
+        },
+        {
+            "name" : "Tishman",
+            "photo" : "tishman.jpg",
+            "ingredients" : ["2 oz Bourbon", "1/2 oz Fresh Lemon Juice", "1/2 oz Rosemary-Lemon Simple Sryup"],
+            "directions" : "Add all ingredients to shaker. Add ice. Shake for 10-20 seconds until very cold. Double strain into chilled rocks glass over ice.",
             "description" : " ",
             "origin" : " "
         }
