@@ -1,10 +1,10 @@
 {
     "cocktailOfTheMonth" : [
         {
-            "name" : "Margarita",
-            "photo" : "margarita.jpg",
-            "ingredients" : ["1 1/2 oz Tequila", "1 oz Fresh Lime Juice", "1/2 oz Triple Sec"],
-            "directions" : "Add all ingredients to shaker. Add ice. Shake for 10-20 seconds until very cold. Double strain into chilled rocks glass over ice."
+            "name" : "Tom Collins",
+            "photo" : "tomcollins.jpg",
+            "ingredients" : ["1 1/2 oz Gin", "1 oz Lemon Juice", "1 tsp Sugar, Seltzer Water"],
+            "directions" : "Add all ingredients to shaker. Add ice. Shake for 10-20 seconds until very cold. Double strain into chilled rocks glass over ice. Top with seltzer water. Serve with lemon wheel and cheery if desired."
         }
     ],
     "gin" : [
@@ -13,6 +13,12 @@
             "photo" : "negroni.jpg",
             "ingredients" : ["1 1/2 oz Gin", "1 1/2 oz Campari", "1 1/2 oz Sweet Vermouth"],
             "directions" : "Add all ingredients to shaker. Add ice. Shake for 10-20 seconds until very cold. Double strain into chilled rocks glass over ice."
+        },
+        {
+            "name" : "Tom Collins",
+            "photo" : "tomcollins.jpg",
+            "ingredients" : ["1 1/2 oz Gin", "1 oz Lemon Juice", "1 tsp Sugar, Seltzer Water"],
+            "directions" : "Add all ingredients to shaker. Add ice. Shake for 10-20 seconds until very cold. Double strain into chilled rocks glass over ice. Top with seltzer water. Serve with lemon wheel and cheery if desired."
         }
     ],
     "tequila" : [
