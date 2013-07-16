@@ -28,14 +28,14 @@ button,
 input,
 select,
 textarea {
-    color: #222;
+    color: #222222;
 }
 
 body {
     font-size: 1em;
     line-height: 1.4;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
 }
 
 a {
@@ -83,34 +83,38 @@ textarea {
    Author's custom styles
    ========================================================================== */
 body {
-    font-family: josefin-sans;
+    font-family: Helvetica "Helvetica Neue", "Helvetica Neue Light", "Helvetica Neue Medium";
     font-weight: 450;
     font-size: 1.3em;
     margin: 0;
     padding: 0;
+	width: 640px;
+	max-width: 640px;
 }
 
 header {
     clear: both;
-    padding: 8px;
-    width: auto;
-    height: 120px
-    border-bottom: 1px solid #94AE9D;
-    background-color: #efefef;
-    margin-bottom: 48px;
+    padding-top: 16px;
+    width: 640px;
+	height: 191px;
+	border-bottom: 1px solid #b2b2b2;
+	background-color: #efefef;
+	text-align: center;
+	margin-bottom: 32px;
 }
 
 header h1,
 header h1 a,
 header h1 a:visited {
-    font-weight: 500;
-    font-size: 1.3em;
+    font-family: Helvetica "Helvetica Neue", "Helvetica Neue Light", "Helvetica Neue Medium";
+	font-weight: lighter;
+    font-size: 32px;
     color: #222222;
     text-decoration: none;
-    margin-top: 8px;
-    margin-bottom: 0px;
-    padding: 0;
     text-align: center;
+	padding: 0;
+	margin: 0;
+	padding-bottom: 8px;
 }
 
 header h1 img {
@@ -119,6 +123,8 @@ header h1 img {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 8px;
+	height: 128px;
+	width: 128px;
 }
 
 nav {
@@ -158,91 +164,101 @@ nav li a.active {
 }
 
 section {
-    margin: 8px;
+    margin-left: 16px;
+	margin-right: 16px;
+	margin-bottom: 32px;
+	font-weight: lighter;
+	font-size: 20px;
 }
 
-.cocktailOfTheMonth {
-    width: 624px;
-    height: 240px;
-    margin-bottom: 48px;
+.title {
+	display:inline-block;
+	height: 32px;
+	color: #ffffff;
+	background-color: #579E70;
+	padding: 8px 16px;
+	margin: 0px 8px 8px -16px;
+	font-size: 24px;
 }
 
-.cocktailOfTheMonth img {
-    width: 624px;
-    height: 240px;
-    max-width: 100%;
+#cotm p a {
+	display: block;
+	position: relative;
+	font-weight: lighter;
+	z-index: 100;
+	background-color: #000000;
+	opacity: 0.7;
+	height: 32px;
+	font-size: 20px;
+	color: #ffffff;
+	padding: 4px 8px 0px 8px;
+	margin: -56px 0px 0px 0px;
 }
 
-.cocktailOfTheMonth a.title {
-    display: block;
-    height: 32px;
-    background-color: #222222;
-    color: #fff;
-    font-weight: 400;
-    display: block;
-    padding: 8px;
-    margin-top: -48px;
-    z-index: 100;
-    position: relative;
-    opacity: 0.75;
+#cotm img,
+#cocktail img {
+	clear: both;
+	height: 235px;
+	width: 608px;
 }
 
-h2 {
-    font-weight: 500;
-    font-size: 1.5em;
-    margin: 0;
-    padding: 16px 0px 0px 0px;
-}
-
-h4 {
-    font-weight: 900;
-    font-size: .7em;
-    margin: 0;
-    margin-bottom: 8px;
-    text-transform: uppercase;
-}
-
-section.title {
-
-}
-
-.title h4 {
-    margin: 0;
-    padding: 0;
-}
-
-.cocktail_lists {
+#cocktail_list {
     clear: both;
 }
 
-.cocktail_lists ul {
+#cocktail_list ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
 }
 
-.cocktail_lists li {
+#cocktail_list li {
     margin: 0;
     padding: 0;
     list-style-type: none;
     float: left;
+	width: 192px;
+	margin-right: 16px;
+    margin-bottom: 16px;
 }
     
-.cocktail_lists li a {
+#cocktail_list li a {
     color: #222;
     text-decoration: none;
     display: block;
     float: left;
-    width: 201px;
-    padding-right: 8px;
-    margin-bottom: 8px;
 }
 
-.cocktail_lists li a img {
-    width: 195px;
+#cocktail_list li.third { margin-right: 0px; }
+
+#cocktail_list li a img {
+    width: 192px;
+	height: 192px;
+	margin-bottom: 8px;
+	display: block;
 }
 
+section h4 {
+	text-transform: uppercase;
+	color: #579E70;
+	font-weight: normal;
+	padding: 0;
+	margin: 0;
+	font-size: 16px;
+	margin-bottom: 8px;
+	margin-top: 32px; 
+}
 
+#ingredientsList {
+	margin: 0;
+	padding: 0;
+	margin-left: 32px;
+}
+
+#directions p {
+	margin: 0;
+	padding: 0;
+}
 
 /* ==========================================================================
    Helper classes

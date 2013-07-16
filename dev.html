@@ -28,58 +28,28 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/dev.css">
+		<script src="data/drinks.json"></script>
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-        <script>var __adobewebfontsappname__ = "code"</script>
-        <script src="http://use.edgefonts.net/josefin-sans:i7,n7,n3,i4,i3,n4,i1,n6,n1,i6:all.js"></script>
     </head>
     <body>
 
         <header>
             <nav>
-                <li><a href="javascript: showDrinks('all');">All</a></li>
-                <li><a href="javascript: showDrinks('whiskey');">Whiskey</a></li>
-                <li><a href="javascript: showDrinks('gin');">Gin</a></li>
-                <li><a href="javascript: showDrinks('vodka');" class="disabled">Vodka</a></li>
-                <li><a href="javascript: showDrinks('tequila');">Tequila</a></li>
+                <li><a href="javascript: showType('all');">All</a></li>
+                <li><a href="javascript: showType('whiskey');">Whiskey</a></li>
+                <li><a href="javascript: showType('gin');">Gin</a></li>
+                <li><a href="javascript: showType('vodka');" class="disabled">Vodka</a></li>
+                <li><a href="javascript: showType('tequila');">Tequila</a></li>
             </nav>
-            <h1><a href="javascript: showNav();"><img src="img/IA_logo_72.png">Imbibe Anywhere</a></h1>
+            <h1><a href="javascript: showType('all');"><img src="img/IA_logo_144.png">Imbibe Anywhere</a></h1>
         </header>
-        
-        <section class="cocktailOfTheMonth">
-            <h4>Cocktail of the Month</h4>
-            <a href="javascript: showDrinks('margarita');"><img src="img/cocktails/margarita.jpg" /></a>
-            <a class="title" href="javascript: showDrinks('margarita');">Margarita</a>
-        </section>
-        
-        <section class="cocktail_lists">
-            <ul id="thumbnail_lists">
-            </ul>
-        </section>
-
 
         <script src="js/vendor/jquery.min.js"></script>
         <script src="js/vendor/zepto.min.js"></script>
         <script src="js/helper.js"></script>
-        <script src="js/main.js"></script>
+        <script src="js/dev.js"></script>
         <script>
-            $.getJSON('data/drinks.json', function(data) 
-            {
-                var all_drinks = [];
-                $.each( data, function(key, drinks) 
-                {
-                    //console.log( drinks );
-                    for( var i = 0; i < drinks.length; i++ )
-                    {
-                        if( key != "cocktailOfTheMonth" )
-                        {
-                            all_drinks.push( "<li>" + "<a href=\"javascript: showDrinks('"+drinks[i].name+"');\"><img src='img/cocktails/thumbnails/"+drinks[i].photo+"' />" + drinks[i].name + "</a></li>" );
-                            
-                        }
-                    }
-                });
-                $('#thumbnail_lists').append(all_drinks);
-                //console.log(all_drinks);
-            });
+			showType("all");
         </script>
     </body>
 </html>
