@@ -1,11 +1,19 @@
 var drinksJson = {
     "drinks" : [
         {
-            "name" : "Tom Collins",
+            "name" : "French 75",
 			"type" : "Gin",
 			"cotm" : "Yes",
+            "photo" : "french75.jpg",
+            "ingredients" : ["1-2 oz Gin", "1 oz Lemon Juice", "1 tsp Sugar", "Champage to top"],
+            "directions" : "Add all ingredients to shaker. Add ice. Shake for 10-20 seconds until very cold. Double strain into chilled rocks glass over ice. Top with seltzer water. Serve with lemon wheel and cheery if desired."
+        },
+        {
+            "name" : "Tom Collins",
+			"type" : "Gin",
+			"cotm" : "No",
             "photo" : "tomcollins.jpg",
-            "ingredients" : ["1 1/2 oz Gin", "1 oz Lemon Juice", "1 tsp Sugar, Seltzer Water"],
+            "ingredients" : ["1 1/2 oz Gin", "1 oz Lemon Juice", "1 tsp Sugar", "Seltzer Water"],
             "directions" : "Add all ingredients to shaker. Add ice. Shake for 10-20 seconds until very cold. Double strain into chilled rocks glass over ice. Top with seltzer water. Serve with lemon wheel and cheery if desired."
         },
     	{
