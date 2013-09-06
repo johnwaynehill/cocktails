@@ -1,9 +1,17 @@
 var drinksJson = {
     "drinks" : [
         {
-            "name" : "French 75",
+            "name" : "Last Word",
 			"type" : "Gin",
 			"cotm" : "Yes",
+            "photo" : "lastword.jpg",
+            "ingredients" : ["3/4 oz Gin", "3/4 oz Green Chartreuse", "3/4 oz Maraschino Liqueur", "3/4 oz Lime Juice"],
+            "directions" : "Add all ingredients to shaker. Add ice. Shake for 10-20 seconds until very cold. Double strain into chilled rocks glass."
+        },
+        {
+            "name" : "French 75",
+			"type" : "Gin",
+			"cotm" : "No",
             "photo" : "french75.jpg",
             "ingredients" : ["1-2 oz Gin", "1 oz Lemon Juice", "1 tsp Sugar", "Champage to top"],
             "directions" : "Add all ingredients to shaker. Add ice. Shake for 10-20 seconds until very cold. Double strain into chilled rocks glass over ice. Top with seltzer water. Serve with lemon wheel and cheery if desired."
