@@ -180,6 +180,8 @@ section {
 	padding: 8px 16px;
 	margin: 0px 8px 8px -16px;
 	font-size: 20px;
+    transition:width 2s, height 2s;
+    -webkit-transition:width 2s, height 2s, -webkit-transform 2s;
 }
 
 #cotm p a {
