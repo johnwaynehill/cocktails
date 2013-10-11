@@ -7,18 +7,19 @@
         <meta name="description" content="">
         <meta name="HandheldFriendly" content="True">
         <meta name="MobileOptimized" content="320">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, user-scaleable=no">
         <meta http-equiv="cleartype" content="on">
 
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/touch/apple-touch-icon-144x144-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/touch/apple-touch-icon-114x114-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/touch/apple-touch-icon-72x72-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" href="img/touch/apple-touch-icon-57x57-precomposed.png">
-        <link rel="shortcut icon" href="img/touch/apple-touch-icon.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/IA_logo_144.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/IA_logo_114.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/IA_logo_72.png">
+        <link rel="apple-touch-icon-precomposed" href="img/IA_logo_72.png">
+        <link rel="shortcut icon" href="img/IA_logo_16.png">
+        <link rel="shortcut icon" href="img/IA_logo_32.png">
 
         <!-- Tile icon for Win8 (144x144 + tile color) -->
-        <meta name="msapplication-TileImage" content="img/touch/apple-touch-icon-144x144-precomposed.png">
-        <meta name="msapplication-TileColor" content="#222222">
+        <meta name="msapplication-TileImage" content="img/IA_logo_144.png">
+        <meta name="msapplication-TileColor" content="#579E70">
 
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -27,44 +28,28 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+		<script src="data/drinks.json"></script>
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-        <script>var __adobewebfontsappname__ = "code"</script>
-        <script src="http://use.edgefonts.net/josefin-sans:i7,n7,n3,i4,i3,n4,i1,n6,n1,i6:all.js"></script>
     </head>
     <body>
 
         <header>
-            <h1><a href="index.html">Imbibe Anywhere</a></h1>
             <nav>
-                <li><a href="all.html">All</a></li>
-                <li><a href="whiskey/index.html">Whiskey</a></li>
-                <li><a href="gin/index.html">Gin</a></li>
-                <li><a href="vodka/index.html" class="disabled">Vodka</a></li>
-                <li><a href="tequila/index.html">Tequila</a></li>
+                <li><a href="javascript: showType('all');">All</a></li>
+                <li><a href="javascript: showType('whiskey');">Whiskey</a></li>
+                <li><a href="javascript: showType('gin');">Gin</a></li>
+                <li><a href="javascript: showType('vodka');" class="disabled">Vodka</a></li>
+                <li><a href="javascript: showType('tequila');">Tequila</a></li>
             </nav>
+            <h1><a href="javascript: showType('all');"><img src="img/IA_logo_144.png">Imbibe Anywhere</a></h1>
         </header>
-        
-        <section class="title">
-            <h4>Cocktail of the Month</h4>
-        </section>
-        
-        <section class="cocktail">            
-            <h2 id="cocktail_name">Last Word</h2>
-            <img src="img/lastword.jpg" />
-            <h4>Ingredients</h4>
-            <ul class="ingredients">
-                <li>3/4 oz Gin</li>
-                <li>3/4 oz Green Chartreuse</li>
-                <li>3/4 oz Maraschino Liqueur</li>
-                <li>3/4 oz Lime Juice</li>
-            </ul>
-            <h4>Directions</h4>
-            <p>Add all ingredients to shaker. Add ice. Shake for 10-20 seconds until very cold. Double strain into chilled rocks glass.</p>
-        </section>
 
         <script src="js/vendor/jquery.min.js"></script>
         <script src="js/vendor/zepto.min.js"></script>
         <script src="js/helper.js"></script>
         <script src="js/main.js"></script>
+        <script>
+			showType("all");
+        </script>
     </body>
 </html>

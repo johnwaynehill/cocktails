@@ -3,11 +3,11 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    John Wayne Hill -- Designer, Developer, CEO, CCO -- @johnwaynehill.com
 
 # THANKS
 
-    <name>
+    HTML5 Boilerplate
 
 # TECHNOLOGY COLOPHON
 
