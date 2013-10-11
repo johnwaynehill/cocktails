@@ -1,9 +1,17 @@
 var drinksJson = {
     "drinks" : [
         {
+            "name" : "Frisco Sour",
+			"type" : "Whiskey",
+			"cotm" : "Yes",
+            "photo" : "friscosour.jpg",
+            "ingredients" : ["2 oz Rye Whiskey", "1/2 oz Benedictine ", "1/2 oz Lemon Juice"],
+            "directions" : "Add all ingredients to shaker. Add ice. Shake for 10-20 seconds until very cold. Double strain into chilled rocks glass."
+        },
+        {
             "name" : "Last Word",
 			"type" : "Gin",
-			"cotm" : "Yes",
+			"cotm" : "No",
             "photo" : "lastword.jpg",
             "ingredients" : ["3/4 oz Gin", "3/4 oz Green Chartreuse", "3/4 oz Maraschino Liqueur", "3/4 oz Lime Juice"],
             "directions" : "Add all ingredients to shaker. Add ice. Shake for 10-20 seconds until very cold. Double strain into chilled rocks glass."
