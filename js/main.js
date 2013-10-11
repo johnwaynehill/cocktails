@@ -124,16 +124,18 @@ function showDrink( drinkName )
 		{
             nameHtml    = '<span id="drink_title" class="title">'+drink.name+'</span>';
             imgHtml     = '<a id="current_drink" href="javascript: showPhoto(\''+drink.photo+'\');"><img src="img/cocktails/'+drink.photo+'" /></a>';
-            ingrHtml    = '<h4>Ingredients</h4><ul id="ingredientsList"></ul>';
+            ingrHtml    = '<h4>Ingredients</h4>';
+            ingList     = '<ul id="ingredientsList"></ul>';
             dirHtml     = '<h4>Directions</h4><p>' + drink.directions + '</p>';
             
             nameHtml    = $.parseHTML( nameHtml );
             imgHtml     = $.parseHTML( imgHtml );
             ingrHtml    = $.parseHTML( ingrHtml );
+            ingList     = $.parseHTML( ingList );
             dirHtml     = $.parseHTML( dirHtml );
 
 			$.each( drink.ingredients, function(key, ingredient) { 
-                $('#ingredientsList').append('<li>' + ingredient + '</li>'); 
+                $(ingList).append('<li>' + ingredient + '</li>'); 
             });
 		}
 	});
@@ -141,7 +143,10 @@ function showDrink( drinkName )
     // show the new drink
     $(nameHtml).hide().appendTo('#cocktail').delay(600).effect( 'slide', {direction: 'left', easing: 'easeInOutQuart'}, 300 );
     $(imgHtml).hide().appendTo('#cocktail').delay(700).fadeIn();
-    $(ingrHtml).hide().appendTo('#ingredients').delay(750).fadeIn();
+    $('#ingredients').hide();
+    $(ingrHtml).appendTo('#ingredients');
+    $(ingList).appendTo('#ingredients');
+    $('#ingredients').delay(750).fadeIn();
     $(dirHtml).hide().appendTo('#directions').delay(800).fadeIn();
     
     
