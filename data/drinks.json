@@ -9,6 +9,14 @@ var drinksJson = {
             "directions" : "Add all ingredients to shaker. Add ice. Shake for 10-20 seconds until very cold. Double strain into chilled rocks glass."
         },
         {
+            "name" : "Araña de la Muerte",
+			"type" : "Tequila",
+			"cotm" : "No",
+            "photo" : "aranamuerte.jpg",
+            "ingredients" : ["1 1/2 oz Tequila Blanco", "1 oz Lime Juice ", "1 tsp Agave Nectar", "2 Blackberries", "3 Basil Leaves"],
+            "directions" : "Muddle blackberries and 3 basil leaves with agave in shaker. Add lime juice and tequila. Add ice. Shake for 10-20 seconds until very cold. Double strain into a chilled cocktail glass. Garnish with a blackberry and basil leaf skewered with a toothpick.f"
+        },
+        {
             "name" : "Last Word",
 			"type" : "Gin",
 			"cotm" : "No",
