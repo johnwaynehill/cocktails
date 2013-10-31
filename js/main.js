@@ -1,22 +1,11 @@
 var currentPage = "home";
+var oldPage     = null;
 
 function showType( type )
 {
 	if( currentPage != "home" ) // there was a cocktail showing, remove it and show everything.
-	{    
-        // fade out directions, ingredients, photo, then slide out name
-        $('#directions').fadeOut(300);
-        $('#ingredients').delay(50).fadeOut(300);
-        $('#current_drink').delay(350).fadeOut(300);
-        $('#drink_title').delay(450).effect( 'slide', {direction: 'right', easing: 'easeInOutQuart'}, 300 );
-        $('#cocktail').delay(550).fadeOut();
-        
-        setTimeout(function(){
-            // remove any old stuff from the document
-            $('#directions').remove();
-            $('#ingredients').remove();
-            $('#cocktail').remove();
-        }, 2000);
+	{
+                
 	}
     else // all cocktails are being shown already, remove them all and re-display (for fun).   
     {
@@ -25,28 +14,38 @@ function showType( type )
         $('#cotm').remove();
     }
 		
-	if( type == "all" )
+	if( type == "All" )
 	{
-        if( currentPage != "home" ) // user came from another "page", wait 1 second for other animations to finish
-        {
-            setTimeout(function(){ showAllDrinks(); }, 1000);
-        }
-        else
-        {
-            showAllDrinks();
-        }
-        
+        showAllDrinks();        
 	}
 	else
 	{
-		
+        showDrinkType( type );
 	}
 }
 
 function showAllDrinks()
 {
+    oldPage     = currentPage;
     currentPage = "home";
-
+    
+    
+    // first, remove all old drinks
+    removeOldDrinks();
+    
+    
+    // double check that the old list is removed
+    if( $('#cotm') )
+    {
+          $('#cotm').remove(); 
+    }
+    
+    if( $('#cocktail_list') )
+    {
+          $('#cocktail_list').remove(); 
+    }
+    
+    
     // create the new COTM and List elements
     $('body').append( '<section id="cotm"></section>');
     $('body').append( '<section id="cocktail_list"></section>');
@@ -56,6 +55,7 @@ function showAllDrinks()
     $('<span class="title">Cocktail of the Month</span>').hide().appendTo('#cotm').effect( 'slide', {direction: 'left', easing: 'easeInOutQuart'}, 300 );
     $('<span class="title">All Cocktails</span>').hide().appendTo('#cocktail_list').delay(550).effect( 'slide', {direction: 'left', easing: 'easeInOutQuart'}, 300 );
 
+    
     // create the cocktail list element
     $('<ul id="thumbnail_lists"></ul>').appendTo('#cocktail_list');
     
@@ -74,7 +74,81 @@ function showAllDrinks()
         {
             if( key % 2 == 0 ) // add a sepecial class to the even items of the cocktail list
             {
-                var drinkHtml   = "<li class=\"second\">" + "<a href=\"javascript: showDrink('"+drink.name+"');\"><img src='img/cocktails/thumbnails/"+drink.photo+"' />" + drink.name + "</a></li>";
+                if( key % 5 == 0 )
+                {
+                    var drinkHtml   = "<li class=\"second fifth\">" + "<a href=\"javascript: showDrink('"+drink.name+"');\"><img src='img/cocktails/thumbnails/"+drink.photo+"' />" + drink.name + "</a></li>";
+                }
+                else
+                {
+                    var drinkHtml   = "<li class=\"second\">" + "<a href=\"javascript: showDrink('"+drink.name+"');\"><img src='img/cocktails/thumbnails/"+drink.photo+"' />" + drink.name + "</a></li>";
+                }
+            }
+            else if( key % 5 == 0 )
+            {
+                var drinkHtml   = "<li class=\"fifth\">" + "<a href=\"javascript: showDrink('"+drink.name+"');\"><img src='img/cocktails/thumbnails/"+drink.photo+"' />" + drink.name + "</a></li>";
+            }
+            else
+            {
+                var drinkHtml   = "<li>" + "<a href=\"javascript: showDrink('"+drink.name+"');\"><img src='img/cocktails/thumbnails/"+drink.photo+"' />" + drink.name + "</a></li>";
+            }
+            
+            
+            // make the HTML and append it to the list
+            drinkHtml       = $.parseHTML( drinkHtml );
+            $(drinkHtml).hide().appendTo('#thumbnail_lists').delay(950).fadeIn();;
+        }
+    });    
+}
+
+function showDrinkType( drinkType )
+{
+    oldPage     = currentPage;
+    currentPage = "category";
+    var numType = 1;
+
+    
+    // first, remove all old drinks
+    removeOldDrinks();
+    
+
+    
+    // double check that the old list is removed
+    if( $('#cocktail_list') )
+    {
+          $('#cocktail_list').remove(); 
+    }
+    
+    
+    // create the new COTM and List elements
+    $('body').append( '<section id="cocktail_list"></section>');
+    
+    
+    // create the Titles for each section
+    $('<span id="custom_type" class="title">'+drinkType+' Cocktails</span>').hide().appendTo('#cocktail_list').delay(550).effect( 'slide', {direction: 'left', easing: 'easeInOutQuart'}, 300 );
+
+    // create the cocktail list element
+    $('<ul id="thumbnail_lists"></ul>').appendTo('#cocktail_list');
+    
+    
+    // loop over all the drinks from drinks.json and add to appropriate lists
+    $.each( drinksJson.drinks, function(key, drink) 
+    {            
+        if( drink.type == drinkType ) // add the COTM to the COTM section
+        {
+            if( numType % 2 == 0 ) // add a sepecial class to the even items of the cocktail list
+            {
+                if( numType % 5 == 0 )
+                {
+                    var drinkHtml   = "<li class=\"second fifth\">" + "<a href=\"javascript: showDrink('"+drink.name+"');\"><img src='img/cocktails/thumbnails/"+drink.photo+"' />" + drink.name + "</a></li>";
+                }
+                else
+                {
+                    var drinkHtml   = "<li class=\"second\">" + "<a href=\"javascript: showDrink('"+drink.name+"');\"><img src='img/cocktails/thumbnails/"+drink.photo+"' />" + drink.name + "</a></li>";
+                }
+            }
+            else if( numType % 5 == 0 )
+            {
+                var drinkHtml   = "<li class=\"fifth\">" + "<a href=\"javascript: showDrink('"+drink.name+"');\"><img src='img/cocktails/thumbnails/"+drink.photo+"' />" + drink.name + "</a></li>";
             }
             else
             {
@@ -84,34 +158,25 @@ function showAllDrinks()
             // make the HTML and append it to the list
             drinkHtml       = $.parseHTML( drinkHtml );
             $(drinkHtml).hide().appendTo('#thumbnail_lists').delay(950).fadeIn();;
+            
+            numType++;
         }
-    });    
+    });
 }
 
 function showDrink( drinkName )
 {
-    
-    if( currentPage == "home" ) // if user is on home page
-	{
-        // remove all current elemens with animations
-        $('#thumbnail_lists li').fadeOut(300);
-        $('#cotm a').delay(350).fadeOut(300);
-        $('#cocktail_list .title').delay(400).effect( 'slide', {direction: 'right', easing: 'easeInOutQuart'}, 300 );
-        $('#cotm .title').delay(450).effect( 'slide', {direction: 'right', easing: 'easeInOutQuart'}, 300 );
-        $('#cocktail_list').delay(320).fadeOut();
-        $('#cotm').delay(320).fadeOut();
-    }
-    else
-    {
-        
-    }
-    
-    
-    currentPage = drinkName;
+    oldPage     = currentPage;
+    currentPage = "cocktail";
     var nameHtml;
     var imgHtml;
     var ingrHtml;
     var dirHtml;
+    
+    
+    // first, remove all old drinks
+    removeOldDrinks();
+    
     
     // create the new elements
     $('body').append( '<section id="cocktail"></section>');
@@ -140,6 +205,7 @@ function showDrink( drinkName )
 		}
 	});
     
+    
     // show the new drink
     $(nameHtml).hide().appendTo('#cocktail').delay(600).effect( 'slide', {direction: 'left', easing: 'easeInOutQuart'}, 300 );
     $(imgHtml).hide().appendTo('#cocktail').delay(700).fadeIn();
@@ -148,11 +214,40 @@ function showDrink( drinkName )
     $(ingList).appendTo('#ingredients');
     $('#ingredients').delay(750).fadeIn();
     $(dirHtml).hide().appendTo('#directions').delay(800).fadeIn();
+}
+
+function removeOldDrinks()
+{
+    if( oldPage == "home" )
+    {
+        // remove all current elemens with animations
+        $('#thumbnail_lists li').fadeOut(300);
+        $('#cotm a').delay(350).fadeOut(300);
+        $('#cocktail_list .title').delay(400).effect( 'slide', {direction: 'right', easing: 'easeInOutQuart'}, 300 );
+        $('#cotm .title').delay(450).effect( 'slide', {direction: 'right', easing: 'easeInOutQuart'}, 300 );
+        $('#cocktail_list').delay(320).fadeOut( 10, function(){ $('#cocktail_list').remove(); } );
+        $('#cotm').delay(320).fadeOut( 10, function(){ $('#cotm').remove(); } );
+    }
+    else if( oldPage == "category" )
+    {
+        // remove all current elemens with animations
+        $('#thumbnail_lists li').fadeOut(300);
+        $('#cotm a').delay(350).fadeOut(300);
+        $('#cocktail_list .title').delay(400).effect( 'slide', {direction: 'right', easing: 'easeInOutQuart'}, 300 );
+        $('#cocktail_list').delay(320).fadeOut( 10, function(){ $('#cocktail_list').remove(); } );
+    }
+    else ( oldPage == "cocktail" )
+    {
+        // fade out directions, ingredients, photo, then slide out name
+        $('#directions').fadeOut( 300, function(){ $('#directions').remove(); } );
+        $('#ingredients').delay(50).fadeOut( 300, function(){ $('#ingredients').remove(); } );
+        $('#current_drink').delay(350).fadeOut(300);
+        $('#drink_title').delay(450).effect( 'slide', {direction: 'right', easing: 'easeInOutQuart'}, 300 );
+        $('#cocktail').delay(550).fadeOut( 300, function(){ $('#cocktail').remove(); } );
     
-    
-    setTimeout(function(){
-        // remove any old stuff from the document
-        $('#cocktail_list').remove();
-        $('#cotm').remove();
-    }, 2000);
+        // remove all current elemens with animations
+        $('#thumbnail_lists li').fadeOut(300);
+        $('#cocktail_list .title').delay(400).effect( 'slide', {direction: 'right', easing: 'easeInOutQuart'}, 300 );
+        $('#cocktail_list').delay(550).fadeOut( 300, function(){ $('#cocktail').remove(); } );
+    }
 }
