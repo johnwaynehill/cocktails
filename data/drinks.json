@@ -1,9 +1,17 @@
 var drinksJson = {
     "drinks" : [
         {
-            "name" : "Frisco Sour",
+            "name" : "Big Apple Bourbon",
 			"type" : "Whiskey",
 			"cotm" : "Yes",
+            "photo" : "bigapplebourbon.jpg",
+            "ingredients" : ["2 oz Bourbon", "1/2 oz Lemon Juice", "1/3 tsp Sugar", "1 1/2 oz Apple Cider", "3 Apple Slices", "Dash of Cinnamon"],
+            "directions" : "Muddle 2 apple slices, cinnamon, sugar, and lemon juice in a cocktail shaker. Add bourbon to shaker. Add ice. Shake for 10-20 seconds until very cold. Double Strain into a ice filled Collins glass. Add apple cider. Garnish with extra apple slice."
+        },
+        {
+            "name" : "Frisco Sour",
+			"type" : "Whiskey",
+			"cotm" : "No",
             "photo" : "friscosour.jpg",
             "ingredients" : ["2 oz Rye Whiskey", "1/2 oz Benedictine ", "1/2 oz Lemon Juice"],
             "directions" : "Add all ingredients to shaker. Add ice. Shake for 10-20 seconds until very cold. Double strain into chilled rocks glass."
@@ -14,7 +22,7 @@ var drinksJson = {
 			"cotm" : "No",
             "photo" : "aranamuerte.jpg",
             "ingredients" : ["1 1/2 oz Tequila Blanco", "1 oz Lime Juice ", "1 tsp Agave Nectar", "2 Blackberries", "3 Basil Leaves"],
-            "directions" : "Muddle blackberries and 3 basil leaves with agave in shaker. Add lime juice and tequila. Add ice. Shake for 10-20 seconds until very cold. Double strain into a chilled cocktail glass. Garnish with a blackberry and basil leaf skewered with a toothpick.f"
+            "directions" : "Muddle blackberries and 3 basil leaves with agave in shaker. Add lime juice and tequila. Add ice. Shake for 10-20 seconds until very cold. Double strain into a chilled cocktail glass. Garnish with a blackberry and basil leaf skewered with a toothpick."
         },
         {
             "name" : "Last Word",
