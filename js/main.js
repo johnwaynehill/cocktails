@@ -172,6 +172,7 @@ function showDrink( drinkName )
     var imgHtml;
     var ingrHtml;
     var dirHtml;
+    var altHtml;
     
     
     // first, remove all old drinks
@@ -202,6 +203,12 @@ function showDrink( drinkName )
 			$.each( drink.ingredients, function(key, ingredient) { 
                 $(ingList).append('<li>' + ingredient + '</li>'); 
             });
+            
+            if( drink.alternate )
+            {
+                altHtml = "<h4>Alternate</h4><p>" + drink.alternate + "</p>";
+                altHtml     = $.parseHTML( altHtml );
+            }
 		}
 	});
     
@@ -214,6 +221,12 @@ function showDrink( drinkName )
     $(ingList).appendTo('#ingredients');
     $('#ingredients').delay(750).fadeIn();
     $(dirHtml).hide().appendTo('#directions').delay(800).fadeIn();
+    
+    if( altHtml )
+    {
+        
+        $(altHtml).hide().appendTo('#directions').delay(900).fadeIn();
+    }
 }
 
 function removeOldDrinks()
