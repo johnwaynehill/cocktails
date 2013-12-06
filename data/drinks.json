@@ -1,9 +1,17 @@
 var drinksJson = {
     "drinks" : [
         {
+            "name" : "Kir Royale",
+            "type" : "Champagne",
+            "cotm" : "Yes",
+            "photo" : "kirroyale.jpg",
+            "ingredients" : ["1/2 oz Creme de Casis", "4-6 oz Champagne"],
+            "directions" : ["Pour Creme de Casis into a champagne flute or collins glass. Add chilled Champagne to top. Optional: Garnish with a lemon twist."] 
+        },
+        {
             "name" : "Big Apple Bourbon",
 			"type" : "Whiskey",
-			"cotm" : "Yes",
+			"cotm" : "No",
             "photo" : "bigapplebourbon.jpg",
             "ingredients" : ["2 oz Bourbon", "1/2 oz Lemon Juice", "1/3 tsp Sugar", "1 1/2 oz Apple Cider", "3 Apple Slices", "Dash of Cinnamon"],
             "directions" : "Muddle 2 apple slices, cinnamon, sugar, and lemon juice in a cocktail shaker. Add bourbon to shaker. Add ice. Shake for 10-20 seconds until very cold. Double Strain into a ice filled Collins glass. Add apple cider. Garnish with extra apple slice.",
