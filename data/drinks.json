@@ -6,7 +6,16 @@ var drinksJson = {
             "cotm" : "Yes",
             "photo" : "kirroyale.jpg",
             "ingredients" : ["1/2 oz Creme de Casis", "4-6 oz Champagne"],
-            "directions" : ["Pour Creme de Casis into a champagne flute or collins glass. Add chilled Champagne to top. Optional: Garnish with a lemon twist."] 
+            "directions" : "Pour Creme de Casis into a champagne flute or collins glass. Add chilled Champagne to top. Optional: Garnish with a lemon twist."
+        },
+        {
+            "name" : "Mexican Apple Zapper",
+            "type" : "Tequila",
+            "cotm" : "No",
+            "photo" : "mexicanapplezapper.jpg",
+            "ingredients" : ["1 1/2 oz Tequila", "1/2 oz Lemon Juice", "1 Cube of Sugar", "Sparkling Apple Cider", "Lemon Bitters"],
+            "directions" : "Add sugar cube to cocktail shaker. Add 2-3 dashes of lemon bitters. Add tequila and lemon juice. Add ice. Shake for 10-20 seconds until very cold. Strain into an ice filled Collins glass. Top with sparkling apple cider.",
+            "alternate" : "Rim the collins glass with cinnamon before adding any ingredients."
         },
         {
             "name" : "Big Apple Bourbon",
@@ -14,7 +23,7 @@ var drinksJson = {
 			"cotm" : "No",
             "photo" : "bigapplebourbon.jpg",
             "ingredients" : ["2 oz Bourbon", "1/2 oz Lemon Juice", "1/3 tsp Sugar", "1 1/2 oz Apple Cider", "3 Apple Slices", "Dash of Cinnamon"],
-            "directions" : "Muddle 2 apple slices, cinnamon, sugar, and lemon juice in a cocktail shaker. Add bourbon to shaker. Add ice. Shake for 10-20 seconds until very cold. Double Strain into a ice filled Collins glass. Add apple cider. Garnish with extra apple slice.",
+            "directions" : "Muddle 2 apple slices, cinnamon, sugar, and lemon juice in a cocktail shaker. Add bourbon to shaker. Add ice. Shake for 10-20 seconds until very cold. Double Strain into an ice filled Collins glass. Add apple cider. Garnish with extra apple slice.",
             "alternate" : "Use bacon infused bourbon instead of regular bourbon. Add 1-2 dashes of Angostora bitters while mixing."
         },
         {
