@@ -1,9 +1,18 @@
 var drinksJson = {
     "drinks" : [
         {
+            "name" : "El Presidente",
+            "type" : "Rum",
+            "cotm" : "Yes",
+            "photo" : "elpresidente.jpg",
+            "ingredients" : ["1 1/2 oz Gold/Aged Rum", "3/4 oz Dry Vermouth", "1/2 oz Orange Liquor (triple sec)", "1/2 tsp Grenadine"],
+            "directions" : "Add all ingredients to shaker. Add ice. Shake for 10-20 seconds until very cold. Double strain into chilled cocktail glass.",
+            "origin" : "According to Esquire cocktail editor David Wondrich, El Presidente was created by Eddie Woelke, an American bartender at the Jockey Club in Havana. He shrewdly named the drink in honor of President Gerardo Machado, who ruled Cuba throughout most of the Prohibition years. Basil Woon, author of When It's Cocktail Time in Cuba, wrote in 1928 of El Presidente, 'It is the aristocrat of cocktails and is the one preferred by the better class of Cuban.' That same year the eponymous President Machado himself offered an 'El Presidente cocktail' to U.S. President Calvin Coolidge, who was attending a conference, inside Havana's opulently mirrored Hall of the Presidents. This was a moment of unsurpassed presidentiality. It may also have been a moment of some awkwardness, what with Prohibition in the U.S. and all. A reporter noted that Coolidge declined the drink. http://www.lostmag.com/issue6/elpresidente.php"
+        },
+        {
             "name" : "Kir Royale",
             "type" : "Champagne",
-            "cotm" : "Yes",
+            "cotm" : "No",
             "photo" : "kirroyale.jpg",
             "ingredients" : ["1/2 oz Creme de Casis", "4-6 oz Champagne"],
             "directions" : "Pour Creme de Casis into a champagne flute or collins glass. Add chilled Champagne to top. Optional: Garnish with a lemon twist."
@@ -40,7 +49,7 @@ var drinksJson = {
 			"cotm" : "No",
             "photo" : "friscosour.jpg",
             "ingredients" : ["2 oz Rye Whiskey", "1/2 oz Benedictine ", "1/2 oz Lemon Juice"],
-            "directions" : "Add all ingredients to shaker. Add ice. Shake for 10-20 seconds until very cold. Double strain into chilled rocks glass."
+            "directions" : "Add all ingredients to shaker. Add ice. Shake for 10-20 seconds until very cold. Double strain into chilled cocktail glass."
         },
         {
             "name" : "Araña de la Muerte",
@@ -56,7 +65,7 @@ var drinksJson = {
 			"cotm" : "No",
             "photo" : "lastword.jpg",
             "ingredients" : ["3/4 oz Gin", "3/4 oz Green Chartreuse", "3/4 oz Maraschino Liqueur", "3/4 oz Lime Juice"],
-            "directions" : "Add all ingredients to shaker. Add ice. Shake for 10-20 seconds until very cold. Double strain into chilled rocks glass."
+            "directions" : "Add all ingredients to shaker. Add ice. Shake for 10-20 seconds until very cold. Double strain into chilled cocktail glass."
         },
         {
             "name" : "French 75",
@@ -64,7 +73,7 @@ var drinksJson = {
 			"cotm" : "No",
             "photo" : "french75.jpg",
             "ingredients" : ["1-2 oz Gin", "1 oz Lemon Juice", "1 tsp Sugar", "Champage to top"],
-            "directions" : "Add all ingredients to shaker. Add ice. Shake for 10-20 seconds until very cold. Double strain into chilled rocks glass over ice. Top with seltzer water. Serve with lemon wheel and cheery if desired."
+            "directions" : "Add all ingredients to shaker. Add ice. Shake for 10-20 seconds until very cold. Double strain into chilled collins glass over ice. Top with seltzer water. Serve with lemon wheel and cheery if desired."
         },
         {
             "name" : "Tom Collins",
@@ -72,7 +81,7 @@ var drinksJson = {
 			"cotm" : "No",
             "photo" : "tomcollins.jpg",
             "ingredients" : ["1 1/2 oz Gin", "1 oz Lemon Juice", "1 tsp Sugar", "Seltzer Water"],
-            "directions" : "Add all ingredients to shaker. Add ice. Shake for 10-20 seconds until very cold. Double strain into chilled rocks glass over ice. Top with seltzer water. Serve with lemon wheel and cheery if desired."
+            "directions" : "Add all ingredients to shaker. Add ice. Shake for 10-20 seconds until very cold. Double strain into chilled collins glass over ice. Top with seltzer water. Serve with lemon wheel and cheery if desired."
         },
     	{
             "name" : "Negroni",
@@ -96,7 +105,7 @@ var drinksJson = {
 			"cotm" : "No",
             "photo" : "mintjulep.jpg",
             "ingredients" : ["3 oz Whiskey", "1 tbsp Sugar", "3 Sprigs of Spearmint"],
-            "directions" : "Add 2 sprigs worth of mint leaves to glass. Add sugar. Add 1/4 oz water, or a bit of the whiskey. Muddle the mint lightly to release the essential oils and aromas. Add whiskey. Pack cup with crushed ice. Add remaining sprig of mint for garnish."
+            "directions" : "Add 2 sprigs worth of mint leaves to glass. Add sugar. Add 1/4 oz water, or a bit of the whiskey. Muddle the mint lightly to release the essential oils and aromas. Add whiskey. Pack glass with crushed ice. Add remaining sprig of mint for garnish."
         },
         {
             "name" : "Old Fashioned",
@@ -104,7 +113,7 @@ var drinksJson = {
 			"cotm" : "No",
             "photo" : "oldfashioned.jpg",
             "ingredients" : ["2 oz Whiskey", "1 Sugar Cube", "3-4 dashes Bitters", "Orange Peel"],
-            "directions" : "Add sugar cube to glass. Cover sugar cube with Bitters. Use back end of a bar spoon to mash and dissolve sugar cube. Add whiskey and stir slightly. Add 2-3 ice cubes. Stir until glass is very cold. Garnish with orange peel."
+            "directions" : "Add sugar cube to rocks glass. Cover sugar cube with Bitters. Use back end of a bar spoon to mash and dissolve sugar cube. Add whiskey and stir slightly. Add 2-3 ice cubes. Stir until glass is very cold. Garnish with orange peel."
         },
         {
             "name" : "Old Pal",
