@@ -173,6 +173,7 @@ function showDrink( drinkName )
     var ingrHtml;
     var dirHtml;
     var altHtml;
+    var orginsHtml;
     
     
     // first, remove all old drinks
@@ -194,11 +195,13 @@ function showDrink( drinkName )
             ingList     = '<ul id="ingredientsList"></ul>';
             dirHtml     = '<h4>Directions</h4><p>' + drink.directions + '</p>';
             
+            
             nameHtml    = $.parseHTML( nameHtml );
             imgHtml     = $.parseHTML( imgHtml );
             ingrHtml    = $.parseHTML( ingrHtml );
             ingList     = $.parseHTML( ingList );
             dirHtml     = $.parseHTML( dirHtml );
+            
 
 			$.each( drink.ingredients, function(key, ingredient) { 
                 $(ingList).append('<li>' + ingredient + '</li>'); 
@@ -207,7 +210,13 @@ function showDrink( drinkName )
             if( drink.alternate )
             {
                 altHtml = "<h4>Alternate</h4><p>" + drink.alternate + "</p>";
-                altHtml     = $.parseHTML( altHtml );
+                altHtml = $.parseHTML( altHtml );
+            }
+            
+            if( drink.origins )
+            {
+                orginsHtml  = '<h4>Origin</h4>' + drink.origins;
+                orginsHtml  = $.parseHTML( orginsHtml );
             }
 		}
 	});
@@ -222,10 +231,14 @@ function showDrink( drinkName )
     $('#ingredients').delay(750).fadeIn();
     $(dirHtml).hide().appendTo('#directions').delay(800).fadeIn();
     
-    if( altHtml )
+    if( drink.alternate )
     {
-        
         $(altHtml).hide().appendTo('#directions').delay(900).fadeIn();
+    }
+    
+    if( drink.origins )
+    {
+        $(orginsHtml).hide().appendTo('#directions').delay(1000).fadeIn();
     }
 }
 
